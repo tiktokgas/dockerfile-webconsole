@@ -15,8 +15,10 @@ COPY ca.pem /linker/ca.pem
 
 COPY remote-docker-exec /linker/remote-docker-exec
 COPY gotty /linker/gotty
+COPY gotty.conf /linker/gotty.conf
+
 RUN chmod +x /linker/remote-docker-exec && chmod +x /linker/gotty
 
 EXPOSE 8080
 
-CMD ["/linker/gotty","-w","--permit-arguments","bash"]
+CMD ["/linker/gotty","-w","--permit-arguments","--config","/linker/gotty.conf","xxx"]
