@@ -21,4 +21,4 @@ RUN chmod +x /linker/remote-docker-exec && chmod +x /linker/gotty
 
 EXPOSE 8080
 
-CMD ["/linker/gotty","-w","--permit-arguments","--config","/linker/gotty.conf","xxx"]
+CMD ["/linker/gotty","-w","--permit-arguments","--config","/linker/gotty.conf","bash"]
